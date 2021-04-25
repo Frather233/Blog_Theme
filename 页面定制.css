@@ -1,0 +1,181 @@
+/*基础页面设置*/
+body
+{
+    color: #000;
+    background: url(https://i.loli.net/2020/11/05/kRcCydPHM1uhSiW.jpg) fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+    font-size: 20px;
+    min-height: 101%;
+    text-shadow: 0 0 black;
+}
+#mainContent
+{
+    width: 115%;
+}
+#home
+{
+    opacity: 0.80;
+    margin: 0 auto;
+    width: 65%;
+    min-width: 950px;
+    background-color: #fff;
+    padding: 30px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+}
+
+/*隐藏反对按钮*/
+.buryit
+{
+    display: none;
+}
+.returntop
+{
+    height: 40px;
+    width: 30px;
+    background: deepskyblue;
+    position: fixed;
+    bottom: 0;
+    right: 22px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+    display: none;
+}
+
+/*返回顶部*/
+.returntop
+{
+    height: 40px;
+    width: 30px;
+    background: deepskyblue;
+    position: fixed;
+    bottom: 0;
+    right: 22px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+    display: none;
+}
+
+/*代码高亮*/
+pre {
+    /*控制代码不换行*/
+    white-space: pre;
+    word-wrap: normal;
+}
+
+.cnblogs-markdown .hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #abb2bf;
+  background: #282c34 !important;
+  font-size:16px !important;
+  max-height: 700px;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #5c6370;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #c678dd;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e06c75;
+}
+
+.hljs-literal {
+  color: #56b6c2;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta-string {
+  color: #98c379;
+}
+
+.hljs-built_in,
+.hljs-class .hljs-title {
+  color: #e6c07b;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #d19a66;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #61aeee;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+/*makedown行间代码样式 */
+.cnblogs-markdown code {
+    color: #c7254e;
+    border: none !important;
+    font-size: 1em !important;
+    background-color: #f9f2f4 !important;
+    font-family: sans-serif !important;
+}
+
+/*添加按钮*/
+.cnblogs-markdown pre {
+  position: relative;
+}
+.cnblogs-markdown pre > span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 2px;
+  padding: 0 10px;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  cursor: pointer;
+}
+.cnblogs-markdown pre > .copyed {
+  background: #67c23a;
+}

@@ -1,0 +1,32 @@
+<script type="text/javascript">
+    $(document).ready(function ()
+    {
+        var pres = $("pre");
+        for (var i = 0; i < pres.length; i++)//匹配代码块
+        {
+            $(pres[i]).attr('id', 'pre' + i);
+            $(pres[i]).children('code').hide();
+            $(pres[i]).prepend('<button id="btn' + i + '" onclick="view_code(\'pre' + i +
+                '\');">view code</button>');
+        }
+    });
+
+    function view_code(id)
+    {
+        var btn_text = document.getElementById(id).children[0].innerText;
+        var style;
+        var status;
+        if (btn_text == 'view code')//收起状态
+        {
+            style = '""';
+            status = 'hide code';
+        }
+        else//展开状态
+        {
+            style = 'display: none;';
+            status = 'view code';
+        }
+        document.getElementById(id).children[0].innerText = status;
+        document.getElementById(id).children[1].style = style;
+    }
+</script>

@@ -1,0 +1,159 @@
+
+<!--小老鼠游戏控件-->
+<div className="sidebarMouse"><object type="application/x-shockwave-flash" style="outline:none;"
+        data="https://files.cnblogs.com/files/jingmoxukong/mouse.swf?up_bodyColor=f0e9cc&up_feetColor=D4C898&up_eyeColor=000567&up_wheelSpokeColor=DEDEDE&up_wheelColor=FFFFFF&up_waterColor=E0EFFF&up_earColor=b0c4de&up_wheelOuterColor=FF4D4D&up_snoutColor=F7F4E9&up_bgColor=F0E4E4&up_foodColor=cba920&up_wheelCenterColor=E4EB2F&up_tailColor=E6DEBE&"
+        width="230" height="160">
+        <param name="movie"
+            value="https://files.cnblogs.com/files/jingmoxukong/mouse.swf?up_bodyColor=f0e9cc&up_feetColor=D4C898&up_eyeColor=000567&up_wheelSpokeColor=DEDEDE&up_wheelColor=FFFFFF&up_waterColor=E0EFFF&up_earColor=b0c4de&up_wheelOuterColor=FF4D4D&up_snoutColor=F7F4E9&up_bgColor=F0E4E4&up_foodColor=cba920&up_wheelCenterColor=E4EB2E&up_tailColor=E6DEBE&">
+        <param name="AllowScriptAccess" value="always">
+        <param name="wmode" value="opaque">
+    </object></div>
+
+<!--一言-->
+<meta charset="utf-8" />
+<h2><B>一言（ヒトコト）</B></h2>
+<div class="daily a pome">
+    <div class="dmaily pome" id="qwq"></div>
+    <script>
+        var st =
+        [
+            "<center>LKP AK IOI !<br><right>     ——Knight<br>",
+            "<center>这题难么？这题还需要讲么？？<br><right>      ——字幕君<br>",
+            "<center>叮铃铃~ 吃饭！！<br><right>     ——Luckyblock<br>",
+            "<center>YYY<br><right>     ——CAQ<br>",
+            "<center>loj.ac<br><right>     ——LKP<br>",
+            "<center>想和SN谈恋爱<br><right>     ——Frather<br>",
+            "<center>走，我要去水紫题！<br><rightr>     ——有机K<br>",
+            "<center>真搞不懂，学弟学妹为啥在学树剖。<br><right>NOIP 又不考， 考了又看不出来，看出来做不出来，做出来写不对。<br><center>都是要准备 NOIP ，看着玩意干啥...<br><right>     ——_Destiny<br>",
+            "<center>学习线性解决求解两未知多元分界次元元素之和问题，即A+B Problem。<br><right>      ——Frather<br>",
+            "<center>代码已经给出，<br><center> 读者自证不难。<br><right>     ——Frather",
+            "<center>啊<br><center>我要女装！<br><right>     ——CAQ<br>",
+            "<center>棒！<br><right>     ——Luckyblock<br>",
+            "<center>学OI后悔三年<br><center>不学OI后悔一辈子/呲牙<br><right>     ——NJ teacher<br>",
+            "<center>即得易见平凡，由上自证显然，留作习题答案略，读者自证不难。<br><center>反之亦然同理，推论自然成立，略去过程Q.E.D，由上可知证毕。<br><right>     ——Frather",
+            "<center>我要让SN脱了衣服来见我!<br><right>     ——Frather<br>",
+            "<center>成为很厉害很厉害的人，最重要的，就是要热血，永远也不要让你的血凉下去。<br><right>    ——hzwer",
+            "<center>高中的 OI 刚刚开始，希望不要那么快就凋零。兔纸的时间已经不多，请把自己选择的路，好好走下去。<br><right>   ——Bunnycxk",
+            "<center>Who laughs last laughs best!<br><right>     ——Emma",
+            "<center>别哭，眼泪会冻住的。<br><right>     ——那年那兔那些事儿"
+        ];
+        var num;
+        num = Math.floor((Math.random() * 22));
+        document.write(st[num]);
+        var cli;
+    </script>
+    <div style="font-size: 1em; text-align: center; line-height: 1.5em; display: none; " id="qwq"></div>
+    <div style="text-align: right;  margin-top: 15px; font-size: 0.9em; color: #666; display: none; " id="qwq"></div>
+    <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+</div>
+
+
+<!--看板娘-->
+<script>
+    L2Dwidget.init
+    (
+        {
+            "model":
+            {
+                jsonPath:"https://unpkg.com/live2d-widget-model-z16@1.0.5/assets/z16.model.json",
+                //<!--这里改模型，前面后面都要改-->
+                "scale": 1
+            },
+
+            "display":
+            {
+                "position": "rigtht",
+                //<!--设置看板娘的上下左右位置-->
+                "width": 100,
+                "height": 200,
+                "hOffset": -20,
+                "vOffset": -20
+            },
+            "mobile":
+            {
+                "show": true,
+                "scale": 0.3
+            },
+            "react":
+            {
+                "opacityDefault": 0.75,
+                //<!--设置透明度-->
+                "opacityOnHover": 0.2
+            }
+        }
+    );
+</script>
+
+<!--返回顶部-->
+<script>
+    var returntop = document.createElement("div");
+    returntop.className = "returntop";
+    returntop.innerText = "To    Top";
+    document.body.appendChild(returntop);
+    var returntimer = null;
+    var isuser = true;
+
+    window.onscroll = function ()
+    {
+        var scroll = document.documentElement.scrollTop || document.body.scrollTop;
+        if (scroll > 300)
+        {
+            returntop.style.display = "block";
+        }
+        if (scroll < 300)
+        {
+            returntop.style.display = "none";
+        }
+        if (!isuser)
+        {
+            clearInterval(returntimer);
+        }
+        isuser = false;
+    };
+    returntop.onclick = function ()
+    {
+        returntimer = setInterval
+        (
+            function ()
+            {
+                var scroll = document.documentElement.scrollTop || document.body.scrollTop;
+                var speed = Math.floor(-scroll / 8);
+                if (scroll == 0)
+                {
+                    clearInterval(returntimer);
+                }
+                isuser = true;
+                document.documentElement.scrollTop = document.body.scrollTop = scroll + speed;
+            },
+            30
+        );
+    }
+</script>
+
+<!--网页标题-->
+<script>
+    document.addEventListener
+    (
+        "visibilitychange",
+        function ()
+        {
+            if (document.hidden)
+            {
+                document.title = "望君与之共饮";
+            }
+            else
+            {
+                document.title = "(ㄏ￣▽￣)ㄏ来干来干";
+                setTimeout
+                (
+                    function ()
+                    {
+                        document.title = "_Frather的博客";
+                    },
+                    2000
+                );
+            }
+        },
+        false
+    );
+</script>
